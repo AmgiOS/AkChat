@@ -77,12 +77,11 @@
 		99D8A2DD23180260003F7DF7 /* AkChat */ = {
 			isa = PBXGroup;
 			children = (
-				99D8A2DE23180260003F7DF7 /* AppDelegate.swift */,
-				99D8A2E023180260003F7DF7 /* ViewController.swift */,
-				99D8A2E223180260003F7DF7 /* Main.storyboard */,
-				99D8A2E523180261003F7DF7 /* Assets.xcassets */,
-				99D8A2E723180261003F7DF7 /* LaunchScreen.storyboard */,
-				99D8A2EA23180261003F7DF7 /* Info.plist */,
+				99D8A30223180297003F7DF7 /* Supportings Files */,
+				99D8A2FE2318026A003F7DF7 /* Model */,
+				99D8A2FF23180275003F7DF7 /* Views */,
+				99D8A30123180283003F7DF7 /* ViewModels */,
+				99D8A3002318027C003F7DF7 /* Controllers */,
 			);
 			path = AkChat;
 			sourceTree = "<group>";
@@ -94,6 +93,47 @@
 				99D8A2F523180261003F7DF7 /* Info.plist */,
 			);
 			path = AkChatTests;
+			sourceTree = "<group>";
+		};
+		99D8A2FE2318026A003F7DF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		99D8A2FF23180275003F7DF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99D8A2E223180260003F7DF7 /* Main.storyboard */,
+				99D8A2E723180261003F7DF7 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99D8A3002318027C003F7DF7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				99D8A2E023180260003F7DF7 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		99D8A30123180283003F7DF7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		99D8A30223180297003F7DF7 /* Supportings Files */ = {
+			isa = PBXGroup;
+			children = (
+				99D8A2DE23180260003F7DF7 /* AppDelegate.swift */,
+				99D8A2E523180261003F7DF7 /* Assets.xcassets */,
+				99D8A2EA23180261003F7DF7 /* Info.plist */,
+			);
+			path = "Supportings Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +402,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8N8P57QSQ;
-				INFOPLIST_FILE = AkChat/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AkChat/Supportings Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8N8P57QSQ;
-				INFOPLIST_FILE = AkChat/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AkChat/Supportings Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
