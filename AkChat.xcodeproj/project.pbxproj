@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		02AA02041A13D05E9F78B093 /* Pods_AkChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39381EB6D21B5C62DAC2D190 /* Pods_AkChat.framework */; };
+		991662CF23265CBB000F4F4C /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991662CD23265CBB000F4F4C /* ConnectViewController.swift */; };
+		991662D023265CBB000F4F4C /* ConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991662CE23265CBB000F4F4C /* ConnectViewController.xib */; };
 		99D8A2DF23180260003F7DF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8A2DE23180260003F7DF7 /* AppDelegate.swift */; };
-		99D8A2E123180260003F7DF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8A2E023180260003F7DF7 /* ViewController.swift */; };
-		99D8A2E423180260003F7DF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D8A2E223180260003F7DF7 /* Main.storyboard */; };
 		99D8A2E623180261003F7DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D8A2E523180261003F7DF7 /* Assets.xcassets */; };
 		99D8A2E923180261003F7DF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D8A2E723180261003F7DF7 /* LaunchScreen.storyboard */; };
 		99D8A2F423180261003F7DF7 /* AkChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8A2F323180261003F7DF7 /* AkChatTests.swift */; };
@@ -34,10 +34,10 @@
 		39381EB6D21B5C62DAC2D190 /* Pods_AkChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AkChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		626ADCCF348BA945CB3490B7 /* Pods_AkChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AkChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773F817E1888F88AD8C1849B /* Pods-AkChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AkChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-AkChat/Pods-AkChat.release.xcconfig"; sourceTree = "<group>"; };
+		991662CD23265CBB000F4F4C /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		991662CE23265CBB000F4F4C /* ConnectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectViewController.xib; sourceTree = "<group>"; };
 		99D8A2DB23180260003F7DF7 /* AkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D8A2DE23180260003F7DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99D8A2E023180260003F7DF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		99D8A2E323180260003F7DF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99D8A2E523180261003F7DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99D8A2E823180261003F7DF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99D8A2EA23180261003F7DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +77,15 @@
 				C4614BB8F8478DE592624DFB /* Pods-AkChatTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		991662D123265CC8000F4F4C /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				991662CD23265CBB000F4F4C /* ConnectViewController.swift */,
+				991662CE23265CBB000F4F4C /* ConnectViewController.xib */,
+			);
+			path = Authentification;
 			sourceTree = "<group>";
 		};
 		99D8A2D223180260003F7DF7 = {
@@ -130,7 +139,6 @@
 		99D8A2FF23180275003F7DF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				99D8A2E223180260003F7DF7 /* Main.storyboard */,
 				99D8A2E723180261003F7DF7 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -139,7 +147,7 @@
 		99D8A3002318027C003F7DF7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				99D8A2E023180260003F7DF7 /* ViewController.swift */,
+				991662D123265CC8000F4F4C /* Authentification */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -258,7 +266,7 @@
 				99D8A2E923180261003F7DF7 /* LaunchScreen.storyboard in Resources */,
 				99D8A30423180571003F7DF7 /* GoogleService-Info.plist in Resources */,
 				99D8A2E623180261003F7DF7 /* Assets.xcassets in Resources */,
-				99D8A2E423180260003F7DF7 /* Main.storyboard in Resources */,
+				991662D023265CBB000F4F4C /* ConnectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,8 +355,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99D8A2E123180260003F7DF7 /* ViewController.swift in Sources */,
 				99D8A2DF23180260003F7DF7 /* AppDelegate.swift in Sources */,
+				991662CF23265CBB000F4F4C /* ConnectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,14 +379,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		99D8A2E223180260003F7DF7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				99D8A2E323180260003F7DF7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		99D8A2E723180261003F7DF7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
