@@ -10,6 +10,9 @@
 		02AA02041A13D05E9F78B093 /* Pods_AkChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39381EB6D21B5C62DAC2D190 /* Pods_AkChat.framework */; };
 		991662CF23265CBB000F4F4C /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991662CD23265CBB000F4F4C /* ConnectViewController.swift */; };
 		991662D023265CBB000F4F4C /* ConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991662CE23265CBB000F4F4C /* ConnectViewController.xib */; };
+		991662D42326B855000F4F4C /* ConnectViewLayerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991662D32326B855000F4F4C /* ConnectViewLayerShadow.swift */; };
+		991662D82326BA4B000F4F4C /* ButtonConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991662D72326BA4B000F4F4C /* ButtonConnect.swift */; };
+		991662DB2326C4F0000F4F4C /* UIBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991662DA2326C4F0000F4F4C /* UIBarButton.swift */; };
 		99D8A2DF23180260003F7DF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8A2DE23180260003F7DF7 /* AppDelegate.swift */; };
 		99D8A2E623180261003F7DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D8A2E523180261003F7DF7 /* Assets.xcassets */; };
 		99D8A2E923180261003F7DF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D8A2E723180261003F7DF7 /* LaunchScreen.storyboard */; };
@@ -36,6 +39,9 @@
 		773F817E1888F88AD8C1849B /* Pods-AkChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AkChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-AkChat/Pods-AkChat.release.xcconfig"; sourceTree = "<group>"; };
 		991662CD23265CBB000F4F4C /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		991662CE23265CBB000F4F4C /* ConnectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectViewController.xib; sourceTree = "<group>"; };
+		991662D32326B855000F4F4C /* ConnectViewLayerShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewLayerShadow.swift; sourceTree = "<group>"; };
+		991662D72326BA4B000F4F4C /* ButtonConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonConnect.swift; sourceTree = "<group>"; };
+		991662DA2326C4F0000F4F4C /* UIBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButton.swift; sourceTree = "<group>"; };
 		99D8A2DB23180260003F7DF7 /* AkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D8A2DE23180260003F7DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D8A2E523180261003F7DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +94,23 @@
 			path = Authentification;
 			sourceTree = "<group>";
 		};
+		991662D22326B6F4000F4F4C /* ConnectView */ = {
+			isa = PBXGroup;
+			children = (
+				991662D32326B855000F4F4C /* ConnectViewLayerShadow.swift */,
+				991662D72326BA4B000F4F4C /* ButtonConnect.swift */,
+			);
+			path = ConnectView;
+			sourceTree = "<group>";
+		};
+		991662D92326C4C5000F4F4C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				991662DA2326C4F0000F4F4C /* UIBarButton.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		99D8A2D223180260003F7DF7 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +134,7 @@
 		99D8A2DD23180260003F7DF7 /* AkChat */ = {
 			isa = PBXGroup;
 			children = (
+				991662D92326C4C5000F4F4C /* Extension */,
 				99D8A30223180297003F7DF7 /* Supportings Files */,
 				99D8A2FE2318026A003F7DF7 /* Model */,
 				99D8A2FF23180275003F7DF7 /* Views */,
@@ -139,6 +163,7 @@
 		99D8A2FF23180275003F7DF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				991662D22326B6F4000F4F4C /* ConnectView */,
 				99D8A2E723180261003F7DF7 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -355,8 +380,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				991662D82326BA4B000F4F4C /* ButtonConnect.swift in Sources */,
+				991662DB2326C4F0000F4F4C /* UIBarButton.swift in Sources */,
 				99D8A2DF23180260003F7DF7 /* AppDelegate.swift in Sources */,
 				991662CF23265CBB000F4F4C /* ConnectViewController.swift in Sources */,
+				991662D42326B855000F4F4C /* ConnectViewLayerShadow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

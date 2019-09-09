@@ -12,6 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConnectViewController" customModule="AkChat" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="LcE-zZ-5TJ" id="1qb-N3-qVg"/>
+                <outlet property="containerView" destination="QCe-iG-hk3" id="8u3-jn-mCl"/>
+                <outlet property="logInButton" destination="tiS-mh-QiB" id="Bal-fi-aqf"/>
+                <outlet property="mailTextField" destination="Xr1-3y-XnP" id="jSi-h5-nq8"/>
+                <outlet property="passwordTextField" destination="iwS-Sy-Lcg" id="A7Q-4J-lHM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,15 +25,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCe-iG-hk3">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCe-iG-hk3" customClass="ConnectViewLayerShadow" customModule="AkChat" customModuleProvider="target">
                     <rect key="frame" x="20" y="114" width="374" height="668"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiS-mh-QiB">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiS-mh-QiB" customClass="ButtonConnect" customModule="AkChat" customModuleProvider="target">
                             <rect key="frame" x="30" y="444.5" width="314" height="183.5"/>
-                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                             <state key="normal" title="Let's Go">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="logInBtn_Touch_Up_Inside:" destination="-1" eventType="touchUpInside" id="4wY-k5-xgM"/>
+                            </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="8QT-h4-tCU">
                             <rect key="frame" x="10" y="293.5" width="354" height="81"/>
@@ -50,12 +58,16 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AkChatLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xTC-Ub-6p1">
                             <rect key="frame" x="10" y="20" width="354" height="243.5"/>
                         </imageView>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="LcE-zZ-5TJ">
+                            <rect key="frame" x="168.5" y="521" width="37" height="37"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" red="0.41031956580000001" green="0.65534065019999999" blue="0.78140427379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="8QT-h4-tCU" firstAttribute="centerY" secondItem="QCe-iG-hk3" secondAttribute="centerY" id="8gN-Ds-XHH"/>
                         <constraint firstItem="tiS-mh-QiB" firstAttribute="leading" secondItem="QCe-iG-hk3" secondAttribute="leading" constant="30" id="ClD-VE-b18"/>
                         <constraint firstItem="xTC-Ub-6p1" firstAttribute="top" secondItem="QCe-iG-hk3" secondAttribute="top" constant="20" id="E5W-zn-17j"/>
+                        <constraint firstAttribute="bottom" secondItem="LcE-zZ-5TJ" secondAttribute="bottom" constant="110" id="Grg-V3-xA8"/>
                         <constraint firstItem="xTC-Ub-6p1" firstAttribute="centerX" secondItem="QCe-iG-hk3" secondAttribute="centerX" id="J1k-lB-5o7"/>
                         <constraint firstItem="8QT-h4-tCU" firstAttribute="top" secondItem="xTC-Ub-6p1" secondAttribute="bottom" constant="30" id="KXN-Tx-hpN"/>
                         <constraint firstItem="xTC-Ub-6p1" firstAttribute="leading" secondItem="QCe-iG-hk3" secondAttribute="leading" constant="10" id="NGi-jP-QvO"/>
@@ -63,20 +75,19 @@
                         <constraint firstItem="8QT-h4-tCU" firstAttribute="leading" secondItem="QCe-iG-hk3" secondAttribute="leading" constant="10" id="Y8w-L1-3Ok"/>
                         <constraint firstItem="tiS-mh-QiB" firstAttribute="centerX" secondItem="QCe-iG-hk3" secondAttribute="centerX" id="kNE-iB-wSH"/>
                         <constraint firstItem="tiS-mh-QiB" firstAttribute="top" secondItem="8QT-h4-tCU" secondAttribute="bottom" constant="70" id="vtD-zH-Q2Z"/>
+                        <constraint firstItem="LcE-zZ-5TJ" firstAttribute="centerX" secondItem="QCe-iG-hk3" secondAttribute="centerX" id="xUK-Uo-28l"/>
                         <constraint firstItem="8QT-h4-tCU" firstAttribute="centerX" secondItem="QCe-iG-hk3" secondAttribute="centerX" id="y2u-aO-05i"/>
                     </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                            <integer key="value" value="30"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1f-xM-0rs">
+                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1f-xM-0rs">
                     <rect key="frame" x="30" y="809" width="354" height="33"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                     <state key="normal" title="Créer un Compte">
                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="createAccountBtn_Touch_Up_Inside:" destination="-1" eventType="touchUpInside" id="0zK-H6-1fh"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
