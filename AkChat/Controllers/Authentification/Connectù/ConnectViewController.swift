@@ -20,13 +20,17 @@ class ConnectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        setUpKeyboard()
     }
     
     //MARK: - @IBActions
     @IBAction func logInBtn_Touch_Up_Inside(_ sender: UIButton) {
+        logInButton.isHidden = true
+        activityIndicatorView.isHidden = false
     }
     
     @IBAction func createAccountBtn_Touch_Up_Inside(_ sender: Any) {
+        present(CreateAccountViewController(), animated: true, completion: nil)
     }
 }
 
@@ -58,12 +62,5 @@ extension ConnectViewController {
         
         logInButton.setTitleColor(UIColor.white, for: .normal)
         logInButton.isEnabled = true
-    }
-}
-
-extension ConnectViewController {
-    //MARK: - Keyboard
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
     }
 }

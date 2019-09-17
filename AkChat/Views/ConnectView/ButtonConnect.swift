@@ -24,8 +24,8 @@ class ButtonConnect: UIButton {
     //MARK: - Functions
     private func setUpBtnLayerShadow() {
         self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7).cgColor
-        self.layer.shadowRadius = 1.0
-        self.layer.shadowOpacity = 0.75
+        self.layer.shadowRadius = 2
+        self.layer.shadowOpacity = 1
+        self.layer.cornerRadius = 20
     }
-
 }
