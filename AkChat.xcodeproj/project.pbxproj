@@ -21,6 +21,7 @@
 		9961A494233A363600078A19 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961A493233A363600078A19 /* AuthService.swift */; };
 		9961A496233A47FF00078A19 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961A495233A47FF00078A19 /* AuthServiceProtocol.swift */; };
 		998F22FD233A8FC100013844 /* AkChatUnitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F22FC233A8FC100013844 /* AkChatUnitsTests.swift */; };
+		998F2305233AA7EC00013844 /* AuthSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F2304233AA7EC00013844 /* AuthSession.swift */; };
 		99D8A2DF23180260003F7DF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8A2DE23180260003F7DF7 /* AppDelegate.swift */; };
 		99D8A2E623180261003F7DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D8A2E523180261003F7DF7 /* Assets.xcassets */; };
 		99D8A2E923180261003F7DF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D8A2E723180261003F7DF7 /* LaunchScreen.storyboard */; };
@@ -57,6 +58,7 @@
 		998F22FA233A8FC100013844 /* AkChatUnitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkChatUnitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		998F22FC233A8FC100013844 /* AkChatUnitsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkChatUnitsTests.swift; sourceTree = "<group>"; };
 		998F22FE233A8FC100013844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		998F2304233AA7EC00013844 /* AuthSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSession.swift; sourceTree = "<group>"; };
 		99D8A2DB23180260003F7DF7 /* AkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D8A2DE23180260003F7DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D8A2E523180261003F7DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				9961A495233A47FF00078A19 /* AuthServiceProtocol.swift */,
+				998F2304233AA7EC00013844 /* AuthSession.swift */,
 				9961A493233A363600078A19 /* AuthService.swift */,
 			);
 			path = AuthService;
@@ -458,6 +461,7 @@
 				991662D82326BA4B000F4F4C /* ButtonConnect.swift in Sources */,
 				9961A496233A47FF00078A19 /* AuthServiceProtocol.swift in Sources */,
 				9961A494233A363600078A19 /* AuthService.swift in Sources */,
+				998F2305233AA7EC00013844 /* AuthSession.swift in Sources */,
 				99D8A2DF23180260003F7DF7 /* AppDelegate.swift in Sources */,
 				9961A491233A101000078A19 /* CreateAccountViewModel.swift in Sources */,
 				991662CF23265CBB000F4F4C /* ConnectViewController.swift in Sources */,

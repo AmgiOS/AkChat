@@ -6,5 +6,8 @@
 //  Copyright © 2019 Amg-Gauthier. All rights reserved.
 //
 
+import FirebaseAuth
 
-
+protocol AuthProtocol {
+    func createUser(_ email: String, _ password: String, completionHandler: @escaping AuthDataResultCallback)
+}

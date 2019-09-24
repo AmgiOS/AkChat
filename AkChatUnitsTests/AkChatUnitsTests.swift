@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import FirebaseAuth
 @testable import AkChat
 
 class AkChatUnitsTests: XCTestCase {
@@ -19,8 +20,26 @@ class AkChatUnitsTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testGivenCreateClassWhenIsCreatedThenIsSuccess() {
-        let authService = AuthService()
-        XCTAssertNotNil(authService)
+    func testGivenCreateUserWhenIsCreatedThenIsSuccess() {
+//        class AuthSessionFake: AuthProtocol {
+//            var emailFake = "a"
+//            var passFake = "a"
+//
+//            func createUser(_ email: String, _ password: String, completionHandler: @escaping AuthDataResultCallback) {
+//                emailFake = email
+//                passFake = password
+//
+//                let data: AuthDataResult
+//                let error: Error
+//                init(data: AuthDataResult , error: Error) {
+//                    self.data = data
+//                    self.error = error
+//                }
+//                completionHandler(data, error)
+//            }
+//
+//            let authSession = AuthSessionFake()
+//            let session = AuthService(authSession: authSession)
+//        }
     }
 }
