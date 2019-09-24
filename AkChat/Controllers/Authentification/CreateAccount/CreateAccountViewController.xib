@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateAccountViewController" customModule="AkChat" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="aSe-bJ-qCw" id="JRv-Ah-yMd"/>
                 <outlet property="checkPasswordTextField" destination="Qwp-uq-UcW" id="6M1-7A-ORF"/>
+                <outlet property="logInButton" destination="7QP-O7-7zr" id="PIN-gC-emw"/>
                 <outlet property="mailTextField" destination="LUP-Wi-TBR" id="rrn-MU-NED"/>
                 <outlet property="nameTextField" destination="z0t-Ye-Jss" id="IVi-Xi-o5R"/>
                 <outlet property="passwordTextField" destination="ybZ-fq-dJx" id="iQi-KG-sKb"/>
@@ -35,7 +37,7 @@
                         <action selector="returnLogInBtn_Touch_Up_inside:" destination="-1" eventType="touchUpInside" id="uIF-4h-4qz"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QP-O7-7zr" customClass="ButtonConnect" customModule="AkChat" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QP-O7-7zr" customClass="ButtonConnect" customModule="AkChat" customModuleProvider="target">
                     <rect key="frame" x="15" y="742" width="384" height="50"/>
                     <color key="backgroundColor" red="0.3451221585" green="0.68606382610000005" blue="0.85884958509999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
@@ -43,7 +45,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                     <state key="normal" title="Let's Go">
-                        <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="connectBtn_Touch_Up_Inside:" destination="-1" eventType="touchUpInside" id="frJ-ki-DHr"/>
@@ -52,7 +54,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03d-xW-gkx">
                     <rect key="frame" x="15" y="124" width="384" height="608"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Vh-Cm-NoA">
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Vh-Cm-NoA">
                             <rect key="frame" x="25" y="10" width="334" height="328"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ldd-Xn-oZU">
@@ -97,15 +99,21 @@
                         <constraint firstItem="9Vh-Cm-NoA" firstAttribute="leading" secondItem="03d-xW-gkx" secondAttribute="leading" constant="25" id="ltc-Lz-Ctr"/>
                     </constraints>
                 </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aSe-bJ-qCw">
+                    <rect key="frame" x="188.66666666666666" y="750" width="37" height="37"/>
+                    <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="03d-xW-gkx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1Rh-GD-cRP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ga8-2Y-TSC" secondAttribute="bottom" constant="20" id="8Bx-UL-gs0"/>
                 <constraint firstItem="03d-xW-gkx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="CGX-hh-UEC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aSe-bJ-qCw" secondAttribute="bottom" constant="75" id="JNy-9Z-NFn"/>
                 <constraint firstItem="ga8-2Y-TSC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="O69-Cm-Grm"/>
                 <constraint firstItem="ga8-2Y-TSC" firstAttribute="top" secondItem="7QP-O7-7zr" secondAttribute="bottom" constant="20" id="TqT-lc-xlF"/>
                 <constraint firstItem="7QP-O7-7zr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XAq-IP-TFv"/>
+                <constraint firstItem="aSe-bJ-qCw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bHt-kb-tyg"/>
                 <constraint firstItem="7QP-O7-7zr" firstAttribute="top" secondItem="03d-xW-gkx" secondAttribute="bottom" constant="10" id="nr2-gY-kzR"/>
                 <constraint firstItem="7QP-O7-7zr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="pys-cv-sUU"/>
                 <constraint firstItem="03d-xW-gkx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="stH-Xl-WPh"/>

@@ -7,7 +7,11 @@ target 'AkChat' do
 
   # Pods for AkChat
 
-    pod 'Firebase/Analytics'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    pod 'Firebase/Auth'
+    pod 'SDWebImage'
 
   target 'AkChatTests' do
     inherit! :search_paths
