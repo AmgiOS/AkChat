@@ -12,6 +12,7 @@ class ConnectViewController: UIViewController {
     
     //MARK: - @IBOUtlets
     @IBOutlet weak var containerView: ConnectViewLayerShadow!
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logInButton: ButtonConnect!
@@ -43,6 +44,7 @@ extension ConnectViewController {
         textFieldSetUp()
         addDoneButtonOnKeyboard(mailTextField)
         addDoneButtonOnKeyboard(passwordTextField)
+        logoImageView.image = UIImage(named: "AkChatLogo")
     }
 }
 

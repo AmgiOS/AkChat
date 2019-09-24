@@ -20,7 +20,7 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addDoneToKeyboard()
+        setUpViewKeyboard()
         setUpKeyboard()
     }
 
@@ -36,11 +36,13 @@ class CreateAccountViewController: UIViewController {
 
 extension CreateAccountViewController {
     //MARK: - TextField
-    private func addDoneToKeyboard() {
+    private func setUpViewKeyboard() {
         addDoneButtonOnKeyboard(pseudoTextField)
         addDoneButtonOnKeyboard(nameTextField)
         addDoneButtonOnKeyboard(mailTextField)
         addDoneButtonOnKeyboard(passwordTextField)
         addDoneButtonOnKeyboard(checkPasswordTextField)
+        
+        profileImageView.image = UIImage(named: "photo_profil")
     }
 }
