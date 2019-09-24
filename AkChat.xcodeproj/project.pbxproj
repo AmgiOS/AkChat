@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F89982D5D92EB408744D8BB /* Pods_AkChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650047E2F8E31546ACBFC09F /* Pods_AkChat.framework */; };
+		3E063EDFB29E80EFEB307C77 /* Pods_AkChatUnitsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C3F88ED55BDBD649B066F1 /* Pods_AkChatUnitsTests.framework */; };
 		991662CF23265CBB000F4F4C /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991662CD23265CBB000F4F4C /* ConnectViewController.swift */; };
 		991662D023265CBB000F4F4C /* ConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991662CE23265CBB000F4F4C /* ConnectViewController.xib */; };
 		991662D42326B855000F4F4C /* ConnectViewLayerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991662D32326B855000F4F4C /* ConnectViewLayerShadow.swift */; };
@@ -18,15 +20,15 @@
 		9961A491233A101000078A19 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961A490233A101000078A19 /* CreateAccountViewModel.swift */; };
 		9961A494233A363600078A19 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961A493233A363600078A19 /* AuthService.swift */; };
 		9961A496233A47FF00078A19 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961A495233A47FF00078A19 /* AuthServiceProtocol.swift */; };
+		998F22FD233A8FC100013844 /* AkChatUnitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F22FC233A8FC100013844 /* AkChatUnitsTests.swift */; };
 		99D8A2DF23180260003F7DF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8A2DE23180260003F7DF7 /* AppDelegate.swift */; };
 		99D8A2E623180261003F7DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D8A2E523180261003F7DF7 /* Assets.xcassets */; };
 		99D8A2E923180261003F7DF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D8A2E723180261003F7DF7 /* LaunchScreen.storyboard */; };
-		99D8A2F423180261003F7DF7 /* AkChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8A2F323180261003F7DF7 /* AkChatTests.swift */; };
 		99D8A30423180571003F7DF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99D8A30323180571003F7DF7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		99D8A2F023180261003F7DF7 /* PBXContainerItemProxy */ = {
+		998F22FF233A8FC100013844 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 99D8A2D323180260003F7DF7 /* Project object */;
 			proxyType = 1;
@@ -36,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		266556EC71BD972601209C96 /* Pods-AkChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AkChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-AkChat/Pods-AkChat.release.xcconfig"; sourceTree = "<group>"; };
+		650047E2F8E31546ACBFC09F /* Pods_AkChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AkChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6FEE4A02F189060BE7ADDA /* Pods-AkChatUnitsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AkChatUnitsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AkChatUnitsTests/Pods-AkChatUnitsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		776D039E29AA1506C68A6C54 /* Pods-AkChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AkChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AkChat/Pods-AkChat.debug.xcconfig"; sourceTree = "<group>"; };
+		8FF8F0631985A355DAB6C8DE /* Pods-AkChatUnitsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AkChatUnitsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AkChatUnitsTests/Pods-AkChatUnitsTests.release.xcconfig"; sourceTree = "<group>"; };
 		991662CD23265CBB000F4F4C /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		991662CE23265CBB000F4F4C /* ConnectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectViewController.xib; sourceTree = "<group>"; };
 		991662D32326B855000F4F4C /* ConnectViewLayerShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewLayerShadow.swift; sourceTree = "<group>"; };
@@ -47,35 +54,47 @@
 		9961A490233A101000078A19 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		9961A493233A363600078A19 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9961A495233A47FF00078A19 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		998F22FA233A8FC100013844 /* AkChatUnitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkChatUnitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		998F22FC233A8FC100013844 /* AkChatUnitsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkChatUnitsTests.swift; sourceTree = "<group>"; };
+		998F22FE233A8FC100013844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99D8A2DB23180260003F7DF7 /* AkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D8A2DE23180260003F7DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D8A2E523180261003F7DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99D8A2E823180261003F7DF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99D8A2EA23180261003F7DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99D8A2EF23180261003F7DF7 /* AkChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		99D8A2F323180261003F7DF7 /* AkChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkChatTests.swift; sourceTree = "<group>"; };
-		99D8A2F523180261003F7DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99D8A30323180571003F7DF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F6C3F88ED55BDBD649B066F1 /* Pods_AkChatUnitsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AkChatUnitsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		998F22F7233A8FC100013844 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E063EDFB29E80EFEB307C77 /* Pods_AkChatUnitsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99D8A2D823180260003F7DF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99D8A2EC23180261003F7DF7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				0F89982D5D92EB408744D8BB /* Pods_AkChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		853A7A6942D784006FC3BD28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				650047E2F8E31546ACBFC09F /* Pods_AkChat.framework */,
+				F6C3F88ED55BDBD649B066F1 /* Pods_AkChatUnitsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		991662D123265CC8000F4F4C /* Authentification */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,12 +166,23 @@
 			path = AuthService;
 			sourceTree = "<group>";
 		};
+		998F22FB233A8FC100013844 /* AkChatUnitsTests */ = {
+			isa = PBXGroup;
+			children = (
+				998F22FC233A8FC100013844 /* AkChatUnitsTests.swift */,
+				998F22FE233A8FC100013844 /* Info.plist */,
+			);
+			path = AkChatUnitsTests;
+			sourceTree = "<group>";
+		};
 		99D8A2D223180260003F7DF7 = {
 			isa = PBXGroup;
 			children = (
 				99D8A2DD23180260003F7DF7 /* AkChat */,
-				99D8A2F223180261003F7DF7 /* AkChatTests */,
+				998F22FB233A8FC100013844 /* AkChatUnitsTests */,
 				99D8A2DC23180260003F7DF7 /* Products */,
+				D95D13795D8E2B70029302EB /* Pods */,
+				853A7A6942D784006FC3BD28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				99D8A2DB23180260003F7DF7 /* AkChat.app */,
-				99D8A2EF23180261003F7DF7 /* AkChatTests.xctest */,
+				998F22FA233A8FC100013844 /* AkChatUnitsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,15 +206,6 @@
 				99D8A3002318027C003F7DF7 /* Controllers */,
 			);
 			path = AkChat;
-			sourceTree = "<group>";
-		};
-		99D8A2F223180261003F7DF7 /* AkChatTests */ = {
-			isa = PBXGroup;
-			children = (
-				99D8A2F323180261003F7DF7 /* AkChatTests.swift */,
-				99D8A2F523180261003F7DF7 /* Info.plist */,
-			);
-			path = AkChatTests;
 			sourceTree = "<group>";
 		};
 		99D8A2FE2318026A003F7DF7 /* Model */ = {
@@ -232,16 +253,48 @@
 			path = "Supportings Files";
 			sourceTree = "<group>";
 		};
+		D95D13795D8E2B70029302EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				776D039E29AA1506C68A6C54 /* Pods-AkChat.debug.xcconfig */,
+				266556EC71BD972601209C96 /* Pods-AkChat.release.xcconfig */,
+				6B6FEE4A02F189060BE7ADDA /* Pods-AkChatUnitsTests.debug.xcconfig */,
+				8FF8F0631985A355DAB6C8DE /* Pods-AkChatUnitsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		998F22F9233A8FC100013844 /* AkChatUnitsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 998F2303233A8FC100013844 /* Build configuration list for PBXNativeTarget "AkChatUnitsTests" */;
+			buildPhases = (
+				F92A7991B4B12FA76A2926D2 /* [CP] Check Pods Manifest.lock */,
+				998F22F6233A8FC100013844 /* Sources */,
+				998F22F7233A8FC100013844 /* Frameworks */,
+				998F22F8233A8FC100013844 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				998F2300233A8FC100013844 /* PBXTargetDependency */,
+			);
+			name = AkChatUnitsTests;
+			productName = AkChatUnitsTests;
+			productReference = 998F22FA233A8FC100013844 /* AkChatUnitsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		99D8A2DA23180260003F7DF7 /* AkChat */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99D8A2F823180261003F7DF7 /* Build configuration list for PBXNativeTarget "AkChat" */;
 			buildPhases = (
+				79FDB5A1C3F679F93E69E86F /* [CP] Check Pods Manifest.lock */,
 				99D8A2D723180260003F7DF7 /* Sources */,
 				99D8A2D823180260003F7DF7 /* Frameworks */,
 				99D8A2D923180260003F7DF7 /* Resources */,
+				8CB36830842B64298992F308 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,40 +305,22 @@
 			productReference = 99D8A2DB23180260003F7DF7 /* AkChat.app */;
 			productType = "com.apple.product-type.application";
 		};
-		99D8A2EE23180261003F7DF7 /* AkChatTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 99D8A2FB23180261003F7DF7 /* Build configuration list for PBXNativeTarget "AkChatTests" */;
-			buildPhases = (
-				99D8A2EB23180261003F7DF7 /* Sources */,
-				99D8A2EC23180261003F7DF7 /* Frameworks */,
-				99D8A2ED23180261003F7DF7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				99D8A2F123180261003F7DF7 /* PBXTargetDependency */,
-			);
-			name = AkChatTests;
-			productName = AkChatTests;
-			productReference = 99D8A2EF23180261003F7DF7 /* AkChatTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		99D8A2D323180260003F7DF7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1030;
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Amg-Gauthier";
 				TargetAttributes = {
+					998F22F9233A8FC100013844 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 99D8A2DA23180260003F7DF7;
+					};
 					99D8A2DA23180260003F7DF7 = {
 						CreatedOnToolsVersion = 10.3;
-					};
-					99D8A2EE23180261003F7DF7 = {
-						CreatedOnToolsVersion = 10.3;
-						TestTargetID = 99D8A2DA23180260003F7DF7;
 					};
 				};
 			};
@@ -303,12 +338,19 @@
 			projectRoot = "";
 			targets = (
 				99D8A2DA23180260003F7DF7 /* AkChat */,
-				99D8A2EE23180261003F7DF7 /* AkChatTests */,
+				998F22F9233A8FC100013844 /* AkChatUnitsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		998F22F8233A8FC100013844 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99D8A2D923180260003F7DF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,16 +363,92 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99D8A2ED23180261003F7DF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79FDB5A1C3F679F93E69E86F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AkChat-checkManifestLockResult.txt",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		8CB36830842B64298992F308 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AkChat/Pods-AkChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AkChat/Pods-AkChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F92A7991B4B12FA76A2926D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AkChatUnitsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		998F22F6233A8FC100013844 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				998F22FD233A8FC100013844 /* AkChatUnitsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99D8A2D723180260003F7DF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,21 +466,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99D8A2EB23180261003F7DF7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				99D8A2F423180261003F7DF7 /* AkChatTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		99D8A2F123180261003F7DF7 /* PBXTargetDependency */ = {
+		998F2300233A8FC100013844 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 99D8A2DA23180260003F7DF7 /* AkChat */;
-			targetProxy = 99D8A2F023180261003F7DF7 /* PBXContainerItemProxy */;
+			targetProxy = 998F22FF233A8FC100013844 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -378,6 +488,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		998F2301233A8FC100013844 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B6FEE4A02F189060BE7ADDA /* Pods-AkChatUnitsTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8N8P57QSQ;
+				INFOPLIST_FILE = AkChatUnitsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.amgGauthier.AkChatUnitsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AkChat.app/AkChat";
+			};
+			name = Debug;
+		};
+		998F2302233A8FC100013844 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FF8F0631985A355DAB6C8DE /* Pods-AkChatUnitsTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8N8P57QSQ;
+				INFOPLIST_FILE = AkChatUnitsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.amgGauthier.AkChatUnitsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AkChat.app/AkChat";
+			};
+			name = Release;
+		};
 		99D8A2F623180261003F7DF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -496,11 +650,13 @@
 		};
 		99D8A2F923180261003F7DF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 776D039E29AA1506C68A6C54 /* Pods-AkChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8N8P57QSQ;
 				INFOPLIST_FILE = "$(SRCROOT)/AkChat/Supportings Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -514,11 +670,13 @@
 		};
 		99D8A2FA23180261003F7DF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 266556EC71BD972601209C96 /* Pods-AkChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8N8P57QSQ;
 				INFOPLIST_FILE = "$(SRCROOT)/AkChat/Supportings Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,51 +688,18 @@
 			};
 			name = Release;
 		};
-		99D8A2FC23180261003F7DF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P8N8P57QSQ;
-				INFOPLIST_FILE = AkChatTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.amgGauthier.AkChatTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AkChat.app/AkChat";
-			};
-			name = Debug;
-		};
-		99D8A2FD23180261003F7DF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P8N8P57QSQ;
-				INFOPLIST_FILE = AkChatTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.amgGauthier.AkChatTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AkChat.app/AkChat";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		998F2303233A8FC100013844 /* Build configuration list for PBXNativeTarget "AkChatUnitsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				998F2301233A8FC100013844 /* Debug */,
+				998F2302233A8FC100013844 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		99D8A2D623180260003F7DF7 /* Build configuration list for PBXProject "AkChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -589,15 +714,6 @@
 			buildConfigurations = (
 				99D8A2F923180261003F7DF7 /* Debug */,
 				99D8A2FA23180261003F7DF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		99D8A2FB23180261003F7DF7 /* Build configuration list for PBXNativeTarget "AkChatTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				99D8A2FC23180261003F7DF7 /* Debug */,
-				99D8A2FD23180261003F7DF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
