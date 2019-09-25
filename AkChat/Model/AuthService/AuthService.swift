@@ -17,7 +17,7 @@ class AuthService {
     
     
     //MARK: - Functions
-    func createUserInDatabase(_ firstname: String, lastName: String, pseudo: String, _ email: String, _ password: String, imageJPEG: Data?, completion: @escaping (Bool) -> Void) {
+    func createUserInDatabase(_ pseudo: String, _ name: String, _ email: String, _ password: String, imageJPEG: Data?, completion: @escaping (Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             guard let user = user, error == nil else {
                 completion(false)
@@ -38,7 +38,8 @@ class AuthService {
                         completion(false)
                         return
                     }
-                    self.uploadInDatabase(user.user.uid, urlImage, firstname, lastName, email)
+                    self.uploadInDatabase(user.user.uid, urlImage, pseudo, name, email)
+                    completion(true)
                 })
             })
         }
@@ -50,6 +51,7 @@ class AuthService {
         let ref = Constantes.databaseChoiceUser(uid)
         ref.setValue(dataInDatabase) { (error, reference) in
             guard error == nil else {
+                print("error to upload data in storage")
                 return
             }
         }

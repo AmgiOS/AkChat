@@ -43,11 +43,7 @@ class CreateAccountViewController: UIViewController {
 extension CreateAccountViewController {
     //MARK: - @IBActions
     @IBAction func connectBtn_Touch_Up_Inside(_ sender: UIButton) {
-        if accountViewModel.checkIfPasswordIsAvailable(passwordTextField.text ?? "", checkPasswordTextField.text ?? "") {
-            return
-        }
-        logInButton.isHidden = true
-        activityIndicatorView.isHidden = false
+        createUserInStorage()
     }
     
     @IBAction func returnLogInBtn_Touch_Up_inside(_ sender: Any) {
@@ -114,5 +110,27 @@ extension CreateAccountViewController: UIImagePickerControllerDelegate, UINaviga
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         imagePicker.dismiss(animated: true, completion: nil)
+    }
+}
+
+
+extension CreateAccountViewController {
+    //MARK: - Functions
+    private func createUserInStorage() {
+        if accountViewModel.checkIfPasswordIsAvailable(passwordTextField.text ?? "", checkPasswordTextField.text ?? "") {
+            return
+        }
+        
+        logInButton.isHidden = true
+        activityIndicatorView.isHidden = false
+        
+        let imageJPEG = UIImage.jpegData(profileImageView.image ?? UIImage())(compressionQuality: 0.1)
+        
+        AuthService.shared.createUserInDatabase(pseudoTextField.text ?? "", nameTextField.text ?? "", mailTextField.text ?? "" , passwordTextField.text ?? "", imageJPEG: imageJPEG) { (success) in
+            if success {
+                print("c'est Ok")
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }
