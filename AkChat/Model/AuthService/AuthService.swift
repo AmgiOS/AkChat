@@ -7,26 +7,52 @@
 //
 
 import FirebaseAuth
+import FirebaseStorage
 
 class AuthService {
-    enum Result {
-        case data(AuthDataResult)
-        case error(Error)
-    }
+    static let shared = AuthService()
+    private init() {}
+    
     //MARK: - Vars
-    private var authSession: AuthSession
     
-    init(authSession: AuthSession = AuthSession()) {
-        self.authSession = authSession
-    }
     
-    func createUserInDatabase(_ email: String, _ password: String, completion: @escaping(Bool) -> Void) {
-        authSession.createUser(email, password) { (user, error) in
-            guard error == nil else {
+    //MARK: - Functions
+    func createUserInDatabase(_ firstname: String, lastName: String, pseudo: String, _ email: String, _ password: String, imageJPEG: Data?, completion: @escaping (Bool) -> Void) {
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            guard let user = user, error == nil else {
                 completion(false)
                 return
             }
-            completion(true)
+            
+            let storageRef = Constantes.storageProfileChoice(user.user.uid)
+            storageRef.putData(imageJPEG ?? Data(), metadata: nil, completion: { (_, error) in
+                guard error == nil else {
+                    print("error upload image")
+                    completion(false)
+                    return
+                }
+                
+                storageRef.downloadURL(completion: { (url, error) in
+                    guard let urlImage = url?.absoluteString, error == nil else {
+                        print("error upload data in storage")
+                        completion(false)
+                        return
+                    }
+                    self.uploadInDatabase(user.user.uid, urlImage, firstname, lastName, email)
+                })
+            })
+        }
+    }
+    
+    private func uploadInDatabase(_ uid: String, _ profileImage: String, _ firstname: String, _ lastName: String, _ email: String) {
+        let dataInDatabase: Dictionary<String, AnyObject> = (["profileImage": profileImage, "firstName": firstname, "lastName": lastName, "mail": email, "welcome": "Bonjour !"] as AnyObject) as! Dictionary<String, AnyObject>
+        
+        let ref = Constantes.databaseChoiceUser(uid)
+        ref.setValue(dataInDatabase) { (error, reference) in
+            guard error == nil else {
+                return
+            }
         }
     }
 }
+

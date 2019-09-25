@@ -19,9 +19,8 @@
 		9961A48E233A0D2A00078A19 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961A48D233A0D2A00078A19 /* Alerts.swift */; };
 		9961A491233A101000078A19 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961A490233A101000078A19 /* CreateAccountViewModel.swift */; };
 		9961A494233A363600078A19 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961A493233A363600078A19 /* AuthService.swift */; };
-		9961A496233A47FF00078A19 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961A495233A47FF00078A19 /* AuthServiceProtocol.swift */; };
 		998F22FD233A8FC100013844 /* AkChatUnitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F22FC233A8FC100013844 /* AkChatUnitsTests.swift */; };
-		998F2305233AA7EC00013844 /* AuthSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F2304233AA7EC00013844 /* AuthSession.swift */; };
+		99B113D9233B8DA100F98088 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B113D8233B8DA100F98088 /* Constantes.swift */; };
 		99D8A2DF23180260003F7DF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8A2DE23180260003F7DF7 /* AppDelegate.swift */; };
 		99D8A2E623180261003F7DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D8A2E523180261003F7DF7 /* Assets.xcassets */; };
 		99D8A2E923180261003F7DF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D8A2E723180261003F7DF7 /* LaunchScreen.storyboard */; };
@@ -54,11 +53,10 @@
 		9961A48D233A0D2A00078A19 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		9961A490233A101000078A19 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		9961A493233A363600078A19 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		9961A495233A47FF00078A19 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
 		998F22FA233A8FC100013844 /* AkChatUnitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkChatUnitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		998F22FC233A8FC100013844 /* AkChatUnitsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkChatUnitsTests.swift; sourceTree = "<group>"; };
 		998F22FE233A8FC100013844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		998F2304233AA7EC00013844 /* AuthSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSession.swift; sourceTree = "<group>"; };
+		99B113D8233B8DA100F98088 /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		99D8A2DB23180260003F7DF7 /* AkChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D8A2DE23180260003F7DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D8A2E523180261003F7DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,8 +160,6 @@
 		9961A492233A360D00078A19 /* AuthService */ = {
 			isa = PBXGroup;
 			children = (
-				9961A495233A47FF00078A19 /* AuthServiceProtocol.swift */,
-				998F2304233AA7EC00013844 /* AuthSession.swift */,
 				9961A493233A363600078A19 /* AuthService.swift */,
 			);
 			path = AuthService;
@@ -214,6 +210,7 @@
 		99D8A2FE2318026A003F7DF7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				99B113D8233B8DA100F98088 /* Constantes.swift */,
 				9961A492233A360D00078A19 /* AuthService */,
 				9961A48C233A0D1A00078A19 /* Alerts */,
 			);
@@ -459,10 +456,9 @@
 				992820752330DF8600AF3667 /* UIViewController.swift in Sources */,
 				992820702330D79200AF3667 /* CreateAccountViewController.swift in Sources */,
 				991662D82326BA4B000F4F4C /* ButtonConnect.swift in Sources */,
-				9961A496233A47FF00078A19 /* AuthServiceProtocol.swift in Sources */,
 				9961A494233A363600078A19 /* AuthService.swift in Sources */,
-				998F2305233AA7EC00013844 /* AuthSession.swift in Sources */,
 				99D8A2DF23180260003F7DF7 /* AppDelegate.swift in Sources */,
+				99B113D9233B8DA100F98088 /* Constantes.swift in Sources */,
 				9961A491233A101000078A19 /* CreateAccountViewModel.swift in Sources */,
 				991662CF23265CBB000F4F4C /* ConnectViewController.swift in Sources */,
 				9961A48E233A0D2A00078A19 /* Alerts.swift in Sources */,
