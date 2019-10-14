@@ -14,8 +14,8 @@ class CreateAccountViewModel {
     
     //MARK: - Functions
     func checkIfPasswordIsAvailable(_ pass: String, _ pass2: String) -> Bool {
-        if pass != pass2 {
-            alert?.alertDisplayingMessage("Error", "The passwords are different")
+        if pass != pass2 || pass.count < 6 {
+            alert?.alertDisplayingMessage("Error", "The passwords are different or contains below 6 characters")
             return true
         }
         return false

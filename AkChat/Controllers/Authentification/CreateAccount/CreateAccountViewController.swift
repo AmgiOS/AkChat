@@ -117,7 +117,9 @@ extension CreateAccountViewController: UIImagePickerControllerDelegate, UINaviga
 extension CreateAccountViewController {
     //MARK: - Functions
     private func createUserInStorage() {
-        if accountViewModel.checkIfPasswordIsAvailable(passwordTextField.text ?? "", checkPasswordTextField.text ?? "") {
+        view.endEditing(true)
+        guard let password = passwordTextField.text, let checkPass = checkPasswordTextField.text else { return }
+        if accountViewModel.checkIfPasswordIsAvailable(password, checkPass) {
             return
         }
         
@@ -126,10 +128,14 @@ extension CreateAccountViewController {
         
         let imageJPEG = UIImage.jpegData(profileImageView.image ?? UIImage())(compressionQuality: 0.1)
         
-        AuthService.shared.createUserInDatabase(pseudoTextField.text ?? "", nameTextField.text ?? "", mailTextField.text ?? "" , passwordTextField.text ?? "", imageJPEG: imageJPEG) { (success) in
+        AuthServiceSignUp.shared.createUserInDatabase(pseudoTextField.text ?? "", nameTextField.text ?? "", mailTextField.text ?? "" , passwordTextField.text ?? "", imageJPEG: imageJPEG) { (success) in
             if success {
-                print("c'est Ok")
-                self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true) {
+                    let navigationApp = NavigationTabBarViewController()
+                    navigationApp.modalTransitionStyle = .flipHorizontal
+                    navigationApp.modalPresentationStyle = .fullScreen
+                    self.present(navigationApp, animated: true, completion: nil)
+                }
             }
         }
     }

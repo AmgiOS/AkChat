@@ -18,6 +18,17 @@ class ConnectViewController: UIViewController {
     @IBOutlet weak var logInButton: ButtonConnect!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        containerView.isHidden = true
+        logInButton.isHidden = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
@@ -28,6 +39,13 @@ class ConnectViewController: UIViewController {
     @IBAction func logInBtn_Touch_Up_Inside(_ sender: UIButton) {
         logInButton.isHidden = true
         activityIndicatorView.isHidden = false
+        let navigationApp = NavigationTabBarViewController()
+        navigationApp.modalTransitionStyle = .flipHorizontal
+        navigationApp.modalPresentationStyle = .fullScreen
+        present(navigationApp, animated: true) {
+            self.logInButton.isHidden = false
+            self.activityIndicatorView.isHidden = true
+        }
     }
     
     @IBAction func createAccountBtn_Touch_Up_Inside(_ sender: Any) {

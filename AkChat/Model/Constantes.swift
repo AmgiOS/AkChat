@@ -8,6 +8,7 @@
 
 import FirebaseStorage
 import FirebaseDatabase
+import FirebaseAuth
 
 struct Constantes {
     //MARK: - References Database
@@ -32,4 +33,11 @@ extension Constantes {
         return storageProfile.child(id)
     }
     
+}
+
+extension Constantes {
+    //MARK: - Reference Current UID
+    static var currentUID: String {
+        return Auth.auth().currentUser?.uid ?? ""
+    }
 }

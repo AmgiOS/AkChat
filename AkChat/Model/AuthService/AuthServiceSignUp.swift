@@ -9,7 +9,7 @@
 import FirebaseAuth
 import FirebaseStorage
 
-class AuthService {
+class AuthServiceSignUp {
     static let shared = AuthService()
     private init() {}
     
