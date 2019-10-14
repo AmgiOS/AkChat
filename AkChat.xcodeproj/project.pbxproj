@@ -20,6 +20,9 @@
 		992541F12354A3EA00A37D5B /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 992541EF2354A3EA00A37D5B /* SearchViewController.xib */; };
 		992541F52354A47900A37D5B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992541F32354A47900A37D5B /* ProfileViewController.swift */; };
 		992541F62354A47900A37D5B /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 992541F42354A47900A37D5B /* ProfileViewController.xib */; };
+		992541FA2354C42000A37D5B /* AuthServiceSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992541F92354C42000A37D5B /* AuthServiceSignIn.swift */; };
+		992541FD2354C45000A37D5B /* AuthServiceLogOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992541FC2354C45000A37D5B /* AuthServiceLogOut.swift */; };
+		992542002354C57900A37D5B /* ConnectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992541FF2354C57900A37D5B /* ConnectViewModel.swift */; };
 		992820702330D79200AF3667 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9928206E2330D79200AF3667 /* CreateAccountViewController.swift */; };
 		992820712330D79200AF3667 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9928206F2330D79200AF3667 /* CreateAccountViewController.xib */; };
 		992820752330DF8600AF3667 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992820742330DF8600AF3667 /* UIViewController.swift */; };
@@ -61,6 +64,9 @@
 		992541EF2354A3EA00A37D5B /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		992541F32354A47900A37D5B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		992541F42354A47900A37D5B /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		992541F92354C42000A37D5B /* AuthServiceSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceSignIn.swift; sourceTree = "<group>"; };
+		992541FC2354C45000A37D5B /* AuthServiceLogOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceLogOut.swift; sourceTree = "<group>"; };
+		992541FF2354C57900A37D5B /* ConnectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewModel.swift; sourceTree = "<group>"; };
 		9928206E2330D79200AF3667 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		9928206F2330D79200AF3667 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
 		992820742330DF8600AF3667 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -180,11 +186,36 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		992541F72354C2D900A37D5B /* New Group */ = {
+		992541F72354C2D900A37D5B /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				9961A493233A363600078A19 /* AuthServiceSignUp.swift */,
 			);
-			path = "New Group";
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		992541F82354C40400A37D5B /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				992541F92354C42000A37D5B /* AuthServiceSignIn.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		992541FB2354C43100A37D5B /* logOut */ = {
+			isa = PBXGroup;
+			children = (
+				992541FC2354C45000A37D5B /* AuthServiceLogOut.swift */,
+			);
+			path = logOut;
+			sourceTree = "<group>";
+		};
+		992541FE2354C56200A37D5B /* ConnectAccount */ = {
+			isa = PBXGroup;
+			children = (
+				992541FF2354C57900A37D5B /* ConnectViewModel.swift */,
+			);
+			path = ConnectAccount;
 			sourceTree = "<group>";
 		};
 		992820722330D79B00AF3667 /* Connect */ = {
@@ -226,8 +257,9 @@
 		9961A492233A360D00078A19 /* AuthService */ = {
 			isa = PBXGroup;
 			children = (
-				992541F72354C2D900A37D5B /* New Group */,
-				9961A493233A363600078A19 /* AuthServiceSignUp.swift */,
+				992541F82354C40400A37D5B /* SignIn */,
+				992541F72354C2D900A37D5B /* SignUp */,
+				992541FB2354C43100A37D5B /* logOut */,
 			);
 			path = AuthService;
 			sourceTree = "<group>";
@@ -306,6 +338,7 @@
 		99D8A30123180283003F7DF7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				992541FE2354C56200A37D5B /* ConnectAccount */,
 				9961A48F233A0FE700078A19 /* CreateAccount */,
 			);
 			path = ViewModels;
@@ -536,9 +569,12 @@
 				99B113D9233B8DA100F98088 /* Constantes.swift in Sources */,
 				992541F02354A3EA00A37D5B /* SearchViewController.swift in Sources */,
 				9961A491233A101000078A19 /* CreateAccountViewModel.swift in Sources */,
+				992541FA2354C42000A37D5B /* AuthServiceSignIn.swift in Sources */,
 				991662CF23265CBB000F4F4C /* ConnectViewController.swift in Sources */,
 				9961A48E233A0D2A00078A19 /* Alerts.swift in Sources */,
 				991662D42326B855000F4F4C /* ConnectViewLayerShadow.swift in Sources */,
+				992542002354C57900A37D5B /* ConnectViewModel.swift in Sources */,
+				992541FD2354C45000A37D5B /* AuthServiceLogOut.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

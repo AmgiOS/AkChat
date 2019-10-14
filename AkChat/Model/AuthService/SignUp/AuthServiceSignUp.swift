@@ -10,7 +10,7 @@ import FirebaseAuth
 import FirebaseStorage
 
 class AuthServiceSignUp {
-    static let shared = AuthService()
+    static let shared = AuthServiceSignUp()
     private init() {}
     
     //MARK: - Vars

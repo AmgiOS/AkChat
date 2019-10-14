@@ -9,6 +9,8 @@
 import UIKit
 
 class ConnectViewController: UIViewController {
+    //MARK: - Vars
+    let connectViewModel = ConnectViewModel()
     
     //MARK: - @IBOUtlets
     @IBOutlet weak var containerView: ConnectViewLayerShadow!
@@ -18,34 +20,16 @@ class ConnectViewController: UIViewController {
     @IBOutlet weak var logInButton: ButtonConnect!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        containerView.isHidden = true
-        logInButton.isHidden = true
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
         setUpKeyboard()
+        checkIfAlreadyConnect()
     }
     
     //MARK: - @IBActions
     @IBAction func logInBtn_Touch_Up_Inside(_ sender: UIButton) {
-        logInButton.isHidden = true
-        activityIndicatorView.isHidden = false
-        let navigationApp = NavigationTabBarViewController()
-        navigationApp.modalTransitionStyle = .flipHorizontal
-        navigationApp.modalPresentationStyle = .fullScreen
-        present(navigationApp, animated: true) {
-            self.logInButton.isHidden = false
-            self.activityIndicatorView.isHidden = true
-        }
+        signInService()
     }
     
     @IBAction func createAccountBtn_Touch_Up_Inside(_ sender: Any) {
@@ -54,7 +38,7 @@ class ConnectViewController: UIViewController {
 }
 
 extension ConnectViewController {
-    //MARK: - Functions
+    //MARK: - Set Up view
     private func setUpView() {
         activityIndicatorView.isHidden = true
         logInButton.isEnabled = false
@@ -63,6 +47,43 @@ extension ConnectViewController {
         addDoneButtonOnKeyboard(mailTextField)
         addDoneButtonOnKeyboard(passwordTextField)
         logoImageView.image = UIImage(named: "AkChatLogo")
+        
+        connectViewModel.alert = Alerts(controller: self)
+    }
+}
+ 
+extension ConnectViewController {
+    //MARK: - AuthService
+    private func signInService() {
+        guard let email = mailTextField.text, let password = passwordTextField.text else { return }
+        connectViewModel.signIn.signIn(email, password, onSuccess: { (success) in
+            self.logInButton.isHidden = true
+            self.activityIndicatorView.isHidden = false
+            if success {
+                let navigationApp = NavigationTabBarViewController()
+                navigationApp.modalTransitionStyle = .flipHorizontal
+                navigationApp.modalPresentationStyle = .fullScreen
+                
+                self.present(navigationApp, animated: true, completion: nil)
+            } else {
+                self.connectViewModel.alertIfEmailAndPasswordIsIncorrect()
+                self.logInButton.isHidden = false
+                self.activityIndicatorView.isHidden = true
+                self.passwordTextField.text = ""
+            }
+        })
+    }
+    
+    private func checkIfAlreadyConnect() {
+        connectViewModel.signIn.checkIfUserIsAlreadyOnline { (success) in
+            if success {
+                let navigationApp = NavigationTabBarViewController()
+                navigationApp.modalTransitionStyle = .flipHorizontal
+                navigationApp.modalPresentationStyle = .fullScreen
+                
+                self.present(navigationApp, animated: true, completion: nil)
+            }
+        }
     }
 }
 
